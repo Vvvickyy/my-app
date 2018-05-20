@@ -1,0 +1,15 @@
+<% layout('layout')  -%>
+
+
+    <% todos.forEach( function( todo ){ %>
+        
+            <div class="alert alert-info" role="alert">
+                <a  href="/edit/<%= todo._id %>" title="Edit this todo item">
+                    <%= todo.content %>
+                </a>
+                <a href="/destroy/<%= todo._id %>" title="Delete this todo item">
+                <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                </a>
+            </div>
+       
+        <% }); %>
